@@ -18,7 +18,13 @@
     "husky": "^1.1.2",
     "node-sass": "^4.9.4",
     "parcel": "^1.10.3",
+    "postcss-modules": "^1.4.1",
     "prettier": "^1.14.3",
     "pretty-quick": "^1.8.0"
+  },
+  "dependencies": {
+    "postcss": "^7.0.5",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   }
 }
