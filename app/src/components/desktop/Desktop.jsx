@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import * as desktop from './desktop.scss'
 import Window from '../window/Window'
+import './desktop.scss'
 
 class Desktop extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class Desktop extends Component {
 
   render() {
     return (
-      <div className={desktop.desktop}>
+      <div className="desktop">
         {this.state.windows.map((window, ndx) => (
           <Window
             {...window}
