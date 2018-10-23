@@ -1,38 +1,32 @@
 import React, { Fragment } from 'react'
-import * as window from './window.scss'
+import * as css from './window.scss'
 
-const Window = ({ someText }) => {
-  const style = {
-    left: '10px',
-    top: '10px',
-    width: '300px',
-    height: '200px'
-  }
-
-  console.log({ window })
+const Window = ({ src, title, top, right, left, bottom, loaded, loading }) => {
+  const style = { top, right, left, bottom }
 
   return (
-    <div className={window.window} style={style}>
-      <button className={window.window__button}>
-        <i className="fas fa-times" />
+    <div className={`${css.window} ${css.active}`} style={style}>
+      <button className={css.button}>
+        <span className="fas fa-times" />
       </button>
-      <div className={window.window__title} />
-      <button className={window.window__button}>
-        <i className="fas fa-window-minimize" />
+      <div className={css.title}>{title}</div>
+      <button className={css.button}>
+        <span className="fas fa-window-minimize" />
       </button>
-      <button className={window.window__button}>
-        <i className="fas fa-expand-arrows-alt" />
+      <button className={css.button}>
+        <span className="fas fa-expand-arrows-alt" />
       </button>
-      <div className={window.window__content}>
+      <div className={css.content}>
         <iframe
-          className={window.window__content__iframe}
-          src="about:blank"
+          className={css.content__iframe}
+          src={src}
           scrolling="yes"
+          onLoad={loaded}
         />
-        <div className={window.window__content__loading}>Loading...</div>
-        <div className={window.window__content__cover} />
+        {loading ? <div className={css.content__loading}>Loading...</div> : ''}
+        <div className={css.content__cover} />
       </div>
-      <button className={`${window.window__button} ${window.size}`}>
+      <button className={`${css.button} ${css.size}`}>
         <svg viewBox="0 0 10 10">
           <line x1="0" y1="100%" x2="100%" y2="0" stroke="black" />
         </svg>

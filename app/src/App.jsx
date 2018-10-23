@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Window from './components/window/Window'
+import Desktop from './components/desktop/Desktop'
 
-ReactDOM.render(<Window someText="banana" />, document.getElementById('root'))
+ReactDOM.render(<Desktop />, document.getElementById('root'))
