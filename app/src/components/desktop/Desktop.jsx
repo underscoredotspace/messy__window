@@ -10,7 +10,7 @@ class Desktop extends Component {
       windows: [
         {
           title: 'Never SSL',
-          src: '//neverssl.com',
+          src: '//underscore.space',
           top: '20px',
           left: '20px',
           right: '50px',

@@ -6,7 +6,7 @@
   "license": "CC-BY-4.0",
   "private": true,
   "scripts": {
-    "start": "parcel app/public/index.html",
+    "start": "parcel --https app/public/index.html",
     "build": "parcel build app/public/index.html --public-url ./ --detailed-report"
   },
   "husky": {

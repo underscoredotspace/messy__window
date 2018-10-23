@@ -24,7 +24,7 @@ const Window = ({ src, title, top, right, left, bottom, loaded, loading }) => {
           onLoad={loaded}
         />
         {loading ? <div className={css.content__loading}>Loading...</div> : ''}
-        <div className={css.content__cover} />
+        {loading ? <div className={css.content__cover} /> : ''}
       </div>
       <button className={`${css.button} ${css.size}`}>
         <svg viewBox="0 0 10 10">
